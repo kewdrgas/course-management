@@ -1,0 +1,22 @@
+# Root
+.env
+.env.local
+
+# Node.js
+/frontend/node_modules
+/frontend/dist
+/frontend/.env.local
+
+# PHP
+/backend/vendor
+/backend/var
+/backend/.env.local
+/backend/.php-cs-fixer.cache
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
