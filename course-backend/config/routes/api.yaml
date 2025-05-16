@@ -1,0 +1,3 @@
+api_platform:
+  resource: ../../src/Entity
+  type: attribute

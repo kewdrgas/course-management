@@ -1,0 +1,28 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    # Controllers (needed for routing + DI)
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']
+        public: true
+
+    App\Domain\Course\Service\:
+        resource: '../src/Domain/Course/Service'
+        public: true
+
+    # Repositories (Doctrine)
+    App\Repository\:
+        resource: '../src/Repository'
+        tags: ['doctrine.repository_service']
+
+    App\Factory\:
+        resource: '../src/Factory'
+        public: true
+
+    # Interface to concrete implementation binding
+    App\Domain\Course\Repository\CourseRepositoryInterface: '@App\Repository\CourseRepository'
+
